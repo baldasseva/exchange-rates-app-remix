@@ -1,38 +1,17 @@
-# Welcome to Remix!
+# Exchange rate app
 
-- [Remix Docs](https://remix.run/docs)
+This React app is build with [Remix](https://remix.run/). It is a server-side rendered application with three pages (+index landing page). The component library used is [Mantine](https://mantine.dev/). The project is written partially in TypeScript.
 
-## Development
+- **List of rates** contains a currency selector and a date picker. The table will display the currency exchange rates for the selected currency and date values
+- **Compute currency exchange** contains two currency selectors (origin and target) and a number input (amount of origin money). The output will convert the inserted value to the target currency rate
+- **Rates history** contains two currency selectors (origin and target) and a date range picker. The table will display the day by day variation of the exchange rate between the two currencies
 
-From your terminal:
+## How to start
 
-```sh
-npm run dev
-```
+The application uses [Exchange rates Data API](https://apilayer.com/marketplace/exchangerates_data-api). Please insert your api key in the `utils/fetchApi.js` file.
 
-This starts your app in development mode, rebuilding assets on file changes.
-
-## Deployment
-
-First, build your app for production:
+You can start the application in evelopment mode with
 
 ```sh
-npm run build
+yarn dev
 ```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
