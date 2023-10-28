@@ -1,23 +1,17 @@
 import type { MetaFunction } from "@remix-run/node";
-import Rates from "../../views/Rates"
-import CurrencyExchange from "../../views/CurrencyExchange";
+import { Center } from "@mantine/core";
+import Layout from "../../views/Layout";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ]
-}
+  return [{ title: "Homepage" }];
+};
 
 export default function Index() {
   return (
-      <>
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <Rates/>
-    </div>
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <CurrencyExchange/>
-    </div>
-      </>
-  )
+    <Layout page="homepage">
+      <Center>
+        <h2>Welcome, please select a page from the header</h2>
+      </Center>
+    </Layout>
+  );
 }
